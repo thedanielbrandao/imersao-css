@@ -1,0 +1,37 @@
+body{
+	font-family: arial;
+	background-image: url("fundomatrix.jpg");
+	background-size: auto 100vh;
+}
+
+.menu{
+	background-color: black
+}
+
+.menu li{
+	list-style: none; /*Faz com que suma o pontinho antes dos elementos*/
+}
+
+.menu ul{
+	display: flex; /*Faz os elementos serem exibidos em colunas*/
+	justify-content: space-around;
+}
+
+a{
+	color: limegreen;
+	text-decoration: none;/*Faz o link não ficar sublinhado*/
+}
+
+a:hover{
+	text-decoration: underline;/*Faz o link ficar sublinhado ao passar o mouse em cima*/
+}
+
+.site-subtitle, /*Faz as duas classes terem as mesmas propriedades*/
+.site-title{
+	color: whitesmoke;
+	text-align: center;
+}
+
+.site-subtitle{
+	font-style: italic;
+}
