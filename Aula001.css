@@ -1,16 +1,53 @@
+
+*{ /*CSS soft reset*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body{
-	background-image: url("https://images.unsplash.com/photo-1588617312537-5df90cc4acd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+	background-image: url("fundo-tech.jpeg");
 	background-size: 100vw auto;
 	background-repeat: no-repeat;
-	/*filter: opacity(0.5);*/
+	background-attachment: fixed;
 	font-family: arial;
+	font-size: 10px;
+}
+
+@media(min-width: 400px){ /*Se a tela tiver pelo menos 400 pixels, carregará esses estilos*/
+	body{
+		font-size: 14px;
+	}
+}
+
+@media(min-width: 600px){
+	body{
+		font-size: 16px;
+	}
+}
+
+@media(min-width: 1200px){
+	body{
+		font-size: 20px;
+	}
+}
+
+header{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu{
-	background-color: black
+	background-color: rgb(105, 18, 69);
+	position: fixed;
+	width: 100vw;
+	top: 0;
 }
 
 .menu li{
+	font-weight: bold;
 	list-style: none; /*Faz com que suma o pontinho antes dos elementos*/
 }
 
@@ -19,8 +56,13 @@ body{
 	justify-content: space-around;
 }
 
+.menu a{
+	display: block;/*tags inline como <a /> não são considerados block, sendo necessário o uso do `display: block`*/
+	padding: 15px;
+}
+
 a{
-	color: limegreen;
+	color: whitesmoke;
 	text-decoration: none;/*Faz o link não ficar sublinhado*/
 }
 
@@ -30,15 +72,19 @@ a:hover{
 
 .site-subtitle, /*Faz as duas classes terem as mesmas propriedades*/
 .site-title{
-	box-shadow: 0 10px 5px -5px black;
 	color: whitesmoke;
-	margin-left: 635px;
-	margin-right: 635px;
 	text-align: center;
 }
 
 .site-subtitle{
 	font-style: italic;
-	margin-left: 630px;
-	margin-right: 630px;
+}
+
+.img-portfolio{
+	height: 100px;
+	width: 100px;
+}
+
+figcaption{
+	color: red;
 }
