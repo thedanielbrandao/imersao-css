@@ -1,28 +1,22 @@
 
 *{ /*CSS soft reset*/
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 body{
+	background-attachment: fixed;
 	background-image: url("fundo-tech.jpeg");
 	background-size: 100vw auto;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	font-family: arial;
-	font-size: 10px;
+	font-family: 'Rubik', sans-serif;
+	font-size: 12px;
 }
 
-@media(min-width: 400px){ /*Se a tela tiver pelo menos 400 pixels, carregará esses estilos*/
+@media(min-width: 700px){
 	body{
-		font-size: 14px;
-	}
-}
-
-@media(min-width: 600px){
-	body{
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 
@@ -32,33 +26,34 @@ body{
 	}
 }
 
-@media(max-width: 399px){
+@media(max-width: 699px){
 	body{
-		background-image: url("fundo-tech-mobile.png");
+		background-attachment: fixed;
+		background-position-x: center;
 		background-size: auto 100vh;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
-		font-family: arial;
-		font-size: 10px;
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
 	}
 }
 
-
 header{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
 	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+
 }
 
 .menu{
 	background-color: rgb(105, 18, 69);
 	position: fixed;
-	width: 100vw;
 	top: 0;
+	width: 100vw;
 }
 
 .menu li{
+	font-family: 'Ubuntu Mono', monospace;
 	font-weight: bold;
 	list-style: none; /*Faz com que suma o pontinho antes dos elementos*/
 }
@@ -85,18 +80,66 @@ a:hover{
 .site-subtitle, /*Faz as duas classes terem as mesmas propriedades*/
 .site-title{
 	color: whitesmoke;
+	line-height: 1.5em;
 	text-align: center;
 }
 
+.site-title{
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 3em;
+}
+
 .site-subtitle{
+	font-family: 'Montserrat', sans-serif;
 	font-style: italic;
 }
 
-.img-portfolio{
-	height: 100px;
-	width: 100px;
+figcaption{
+	color: whitesmoke;
 }
 
-figcaption{
-	color: red;
+.projetos{
+	padding: 2em;
+	height: 100vh;
+}
+
+.projetos h2{
+	color: whitesmoke;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	justify-content: center;
+	margin-bottom: 1.5em;
+}
+
+.projetos .grid{
+	align-items: center;
+	display: grid;
+	gap: 2em;
+}
+
+@media(min-width: 708px){
+	.projetos .grid{
+		grid-template-columns: 304px 304px;
+		justify-content: center;
+	}
+}
+
+@media(min-width: 1012px){
+	.projetos.grid{
+		align-content: center;
+		grid-template-columns: repeat(3, 304);
+		justify-content: center;
+	}
+}
+
+.projetos figure{
+	text-align: center;
+	
+}
+
+.img-projetos{
+	height: 166px;
+	width: 100%;
+	object-fit: cover;
 }
