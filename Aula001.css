@@ -50,6 +50,7 @@ header{
 	position: fixed;
 	top: 0;
 	width: 100vw;
+	z-index: 1;
 }
 
 .menu li{
@@ -66,6 +67,7 @@ header{
 .menu a{
 	display: block;/*tags inline como <a /> não são considerados block, sendo necessário o uso do `display: block`*/
 	padding: 15px;
+	transition: background-color 1s, color 1s;
 }
 
 a{
@@ -73,15 +75,36 @@ a{
 	text-decoration: none;/*Faz o link não ficar sublinhado*/
 }
 
-a:hover{
-	text-decoration: underline;/*Faz o link ficar sublinhado ao passar o mouse em cima*/
+.menu a:hover{
+	background-color: whitesmoke;
+	color: #691245;
+}
+
+.titles{
+	animation: linear 1.5s titlesAnimation forwards;/*Está declarada a animação*/
+	animation-delay: 500ms;
+	opacity: 0;
+}
+
+@keyframes titlesAnimation{/*Aqui será criada a animação ao definir o estado inicial e o estado final*/
+	0%{/*Apenas digitei isso para efeitos de aprendizagem, pois isso ja foi definido no .titles{}*/
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
 }
 
 .site-subtitle, /*Faz as duas classes terem as mesmas propriedades*/
 .site-title{
+	align-items: center;
 	color: whitesmoke;
+	display: flex;
+	justify-content: center;
 	line-height: 1.5em;
 	text-align: center;
+
 }
 
 .site-title{
@@ -94,15 +117,24 @@ a:hover{
 	font-style: italic;
 }
 
+/*.first-footer{
+	align-items: flex-end ;
+	color:whitesmoke;
+	display:flex;
+	justify-content: center;
+}*/
+
 figcaption{
 	color: whitesmoke;
 }
 
+/*.contato,*/
 .projetos{
 	padding: 2em;
-	height: 100vh;
+	min-height: 100vh;
 }
 
+.contato h2,
 .projetos h2{
 	color: whitesmoke;
 	display: flex;
@@ -115,7 +147,8 @@ figcaption{
 .projetos .grid{
 	align-items: center;
 	display: grid;
-	gap: 2em;
+	gap: 5em;
+	height: calc(100vh- 8em - 48px);
 }
 
 @media(min-width: 708px){
@@ -142,4 +175,31 @@ figcaption{
 	height: 166px;
 	width: 100%;
 	object-fit: cover;
+	transition: transform 300ms;
+}
+
+.img-projetos:active,/*Como mobiles não têm mouse, esse pseudo-seletor será ativado no click*/
+.img-projetos:hover{
+	transform: scale(1.1);
+}
+
+.contato{
+	background-color: rgba(0, 0, 0, .8);
+	padding: 2em;
+}
+
+.contato a{
+	color: whitesmoke;
+	font-size: 4em;
+	transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover{
+	text-shadow: 0 0 20px rgba(245, 245, 245, .5);
+}
+
+.contato .icons{
+	height: calc(100vh- 8em - 48px);
+	text-align: center;
 }
