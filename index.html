@@ -2,17 +2,22 @@
 <html lang="pt-br">
 <head>
   <link rel="stylesheet" href="Aula001.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:ital@0;1&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">    
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:ital@0;1&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">    
   <meta charset="UTF-8";>
   <script src="https://kit.fontawesome.com/22ce11d7be.js" crossorigin="anonymous"></script>
   <title>Daniel Brandão</title>
 </head>
 <body>
-  <header>
+  <header id="home">
     <nav class="menu">
       <ul>
-        <li><a href="https://twitter.com/_brandaozin">About me</a></li>
+        <li>
+          <a href="#home" class="f-button">
+            <i class="fas fa-home"></i>  Home
+          </a>
+        </li>
+        <li><a href="#about-me">About me</a></li>
         <li><a href="#projetos">Projects</a></li>
         <li><a href="#contato">Contact</a></li>
       </ul>
@@ -22,28 +27,50 @@
       <h2 class="site-subtitle">jr. frontend developer</h2>          
     </div>
   </header>
-  <!--<footer class="first-footer">Know me better below</footer>     -->
+  <section class="about-me" id="about-me">
+    <h2>About me</h2>
+    <figure>
+      <img src="https://pbs.twimg.com/media/ERG2hc0XYAATHvg?format=jpg&name=900x900" alt="Picture of me">
+    </figure>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, adipisci fuga! In corrupti cumque ratione consequatur nulla explicabo. Perferendis voluptatem nam amet dicta fugit deserunt totam ex aliquam, quas ullam!
+    </p>
+    <p>
+      Magnam aliquam laborum ipsa rem ducimus necessitatibus adipisci a dolorem delectus porro. Vitae, aperiam aliquam earum quaerat quisquam deleniti quidem, culpa ea voluptatum odio impedit fugiat nostrum quibusdam a reiciendis.
+    </p>
+    <p>
+      Eos eaque a perferendis expedita? Tempora odio voluptatum voluptatibus minima facere sequi explicabo, laudantium repellendus aliquam atque quidem quia quasi eius nobis accusamus! Laudantium, cumque. Rem fuga aliquid consequatur et?
+    </p>
+    <p>Esse site foi construído durante a <a href="#">Imersão CSS</a></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corporis doloremque at tenetur qui, nam voluptates rerum dicta odio nisi eveniet? Repudiandae rem repellat impedit officiis hic perspiciatis quis alias.</p>
+    <p>Beatae pariatur consequatur ipsam! Eum earum ratione dolore dolorem omnis, nulla delectus dignissimos inventore aperiam cupiditate recusandae numquam similique reiciendis vel quasi magnam sint, sapiente commodi! Dolore hic veritatis sapiente.</p>
+  </section>
+
   <section class="projetos" id="projetos">
     <h2>Personal projects</h2>
     <div class="grid">
-      <figure>
-        <img class="img-projetos" src="img/codepen-print.PNG" alt="Codepen">
-        <figcaption>Codepen</figcaption>
-      </figure>
-      <figure>
-        <img class="img-projetos" src="img/site-chico-pecas-print.PNG" alt="Chico Peças">
-        <figcaption>Chico Peças site</figcaption>
-      </figure>
-      <figure>
-        <img class="img-projetos" src="img/mindfulness.jpg" alt="Mindfulness">
-        <figcaption>Mindfulness</figcaption>
-      </figure>
-      <figure>
-        <img class="img-projetos" src="img/produtividade.png" alt="Produtividade">
-        <figcaption>Productivity</figcaption>
-      </figure>
+        <figure class="card-front">
+          <img class="img-projetos" src="img/codepen-print.PNG" alt="Codepen">
+          <figcaption>Codepen</figcaption>
+        </figure>
+      
+        <figure class="card-front">
+          <img class="img-projetos" src="img/site-chico-pecas-print.PNG" alt="Chico Peças">
+          <figcaption>Chico Peças site</figcaption>
+        </figure>
+
+        <figure class="card-front">
+          <img class="img-projetos" src="img/mindfulness.jpg" alt="Mindfulness">
+          <figcaption>Mindfulness</figcaption>
+        </figure>
+
+        <figure>
+          <img class="img-projetos" src="img/produtividade.png" alt="Produtividade">
+          <figcaption>Productivity</figcaption>
+        </figure>
     </div>
   </section>
+
   <section class="contato" id="contato">
     <h2>Contact</h2>
     <div class="grid icons">
@@ -64,6 +91,5 @@
       </a>
     </div>
   </section>
-
 </body>
 </html>

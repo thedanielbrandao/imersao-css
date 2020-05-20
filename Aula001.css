@@ -10,6 +10,7 @@ body{
 	background-image: url("fundo-tech.jpeg");
 	background-size: 100vw auto;
 	background-repeat: no-repeat;
+	color: whitesmoke;
 	font-family: 'Rubik', sans-serif;
 	font-size: 12px;
 }
@@ -54,6 +55,8 @@ header{
 }
 
 .menu li{
+	align-content: center;
+	display: grid;
 	font-family: 'Ubuntu Mono', monospace;
 	font-weight: bold;
 	list-style: none; /*Faz com que suma o pontinho antes dos elementos*/
@@ -77,6 +80,16 @@ a{
 
 .menu a:hover{
 	background-color: whitesmoke;
+	color: #691245;
+}
+
+.f-button{
+	color: whitesmoke;
+	font-size: 18px;
+	transition: 500ms;
+}
+
+.f-button a:hover{
 	color: #691245;
 }
 
@@ -122,33 +135,67 @@ a{
 	color:whitesmoke;
 	display:flex;
 	justify-content: center;
-}*/
+	cursor: pointer;
+}	*/
 
 figcaption{
 	color: whitesmoke;
 }
 
-/*.contato,*/
+.about-me,
 .projetos{
 	padding: 2em;
 	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+@media (min-width: 1200px){
+	.container{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1200px;
+	}
+}
+
+.about-me h2,
 .contato h2,
 .projetos h2{
-	color: whitesmoke;
-	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.5em;
-	justify-content: center;
 	margin-bottom: 1.5em;
 }
 
+.about-me p{
+	text-indent: 1.4em;
+	margin-bottom: 1.4em;
+	text-align: justify;
+}
+
+.about-me a{
+	transition: 500ms;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.about-me a:hover{
+	color: #691245;
+}
+
+.about-me figure img{
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+	float: right;
+	height: 20em;
+	margin-bottom: 1.5em;
+	margin-left: 2em;
+	object-fit: cover;
+	width: 20em;
+}
+
 .projetos .grid{
-	align-items: center;
+	align-content: center;
 	display: grid;
 	gap: 5em;
-	height: calc(100vh- 8em - 48px);
 }
 
 @media(min-width: 708px){
@@ -175,6 +222,7 @@ figcaption{
 	height: 166px;
 	width: 100%;
 	object-fit: cover;
+	object-position: left bottom;
 	transition: transform 300ms;
 }
 
@@ -191,12 +239,13 @@ figcaption{
 .contato a{
 	color: whitesmoke;
 	font-size: 4em;
-	transition: text-shadow 0.5s;
+	transition: text-shadow .5s, color .5s;
 }
 
 .contato a:active,
 .contato a:hover{
-	text-shadow: 0 0 20px rgba(245, 245, 245, .5);
+	text-shadow: -10px 25px 5px rgba(245, 245, 245, .5);
+	color: #691245;
 }
 
 .contato .icons{
